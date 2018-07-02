@@ -1,0 +1,20 @@
+/* Match History */
+
+.match-history {
+    #choose-opponent {
+        margin-left: 6px;
+    }
+    .match-details {
+        margin-top: 20px;
+    }
+    div {
+        font-style: italic;
+        span {
+            width: 22%;
+            display: inline-block;
+        }
+        label {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+/* Team Details */
+
+.team-details {
+    border: 1px #ccc solid;
+    padding: 12px;
+    background: #eeeeee;
+    h2, h3 {
+        font-family: palatino bold, helvetica, san-serif;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    img.logo {
+        width: 20%;
+    }
+    img.jersey {
+        width: 20%;
+    }
+}
