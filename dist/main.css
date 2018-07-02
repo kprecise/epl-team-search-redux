@@ -1,6 +1,46 @@
-.container h1 {
-  margin-bottom: 20px; }
+/* Team Details */
+.team-details {
+  border: 1px #ccc solid;
+  padding: 12px;
+  background: #eeeeee; }
+  .team-details h2, .team-details h3 {
+    font-family: palatino bold, helvetica, san-serif; }
+  .team-details h2 {
+    font-size: 32px; }
+  .team-details h3 {
+    font-size: 22px; }
+  .team-details img.logo {
+    width: 20%; }
+  .team-details img.jersey {
+    width: 20%; }
 
-.container .slick-container {
-  min-height: 400px; }
+/* Match History */
+.match-history #choose-opponent {
+  margin-left: 6px; }
+
+.match-history .match-details {
+  margin-top: 20px; }
+
+.match-history div {
+  font-style: italic; }
+  .match-history div span {
+    width: 22%;
+    display: inline-block; }
+  .match-history div label {
+    display: block; }
+
+/* Search Results */
+.search-results label {
+  padding: 4px 12px 4px 0; }
+
+.container {
+  margin-top: 40px; }
+  .container h1 {
+    font-family: palatino bold, helvetica, san-serif;
+    margin-bottom: 20px;
+    color: darkgreen;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 7px #ccc; }
+  .container .slick-container {
+    min-height: 400px; }
 
