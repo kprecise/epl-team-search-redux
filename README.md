@@ -24,6 +24,9 @@ Based on the selected team's associated ID, detail about a particular team are p
 ### Match History
 A sub component of Team Detail, Match History is generated from the Team Detail dropdown selection. It displays a history of matches between the two selected sides, including dates and scores.
 
+### React FontAwesome
+A component called FontAwesome where cool isons can be specified via an object through props from it's massive library 
+
 ## Quick Start
 
 ``` bash
