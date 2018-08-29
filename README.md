@@ -1,5 +1,8 @@
-# EPL Team Search App (React, Webpack 4, The SportsDB API, Reactstrap, SASS and Autoprefixer)
-This is a customised front end boilerplate using Webpack 4
+# EPL Team Search App V2 (React, Redux, Webpack 4, The SportsDB API, Reactstrap, SASS and Autoprefixer)
+This is V2 of my EPL Team Search App. This version uses a Redux store with middleware rather local state to pass data to components
+
+## Redux
+Redux with middleware is used to record actions and dispatch relevant data to components
 
 ## Webpack (Compiled CSS with autoprefixer)
 This is already configured to compile SASS to CSS and to apply autoprefixing to the CSS
@@ -18,11 +21,11 @@ This is the master component that holds the main layout of the page and containe
 ### Search Filter
 A simple dropdown that is populated with EPL football team data from the API
 
-### Team Detail
+### Team Profile
 Based on the selected team's associated ID, detail about a particular team are produced and displayed. Under Match History anotehr dropdown can be selected that allows an opponent to be selected
 
-### Match History
-A sub component of Team Detail, Match History is generated from the Team Detail dropdown selection. It displays a history of matches between the two selected sides, including dates and scores.
+<!-- ### Match History
+A sub component of Team Detail, Match History is generated from the Team Detail dropdown selection. It displays a history of matches between the two selected sides, including dates and scores. -->
 
 ### React FontAwesome
 A component called FontAwesome where cool icons can be specified via an object through props from it's massive library 
