@@ -15,9 +15,6 @@ Integration of the SportsDB Football API. Includes a search and selection of a c
 
 ## Components
 
-### Search Results
-This is the master component that holds the main layout of the page and containes the Search Filter and Team Detail components
-
 ### Search Filter
 A simple dropdown that is populated with EPL football team data from the API
 
