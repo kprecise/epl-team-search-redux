@@ -1,0 +1,27 @@
+/* Search Results */
+
+.search-results {
+    label {
+        padding: 4px 12px 4px 0;
+    }
+}
+.team-profile {
+    border: 1px #ccc solid;
+    padding: 12px;
+    background: #eeeeee;
+    h2, h3 {
+        font-family: palatino bold, helvetica, san-serif;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    img.logo {
+        width: 20%;
+    }
+    img.jersey {
+        width: 20%;
+    }
+}

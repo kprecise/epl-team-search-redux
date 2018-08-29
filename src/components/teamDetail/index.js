@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from 'reactstrap';
 import "./index.scss";
-import MatchHistory from "../matchHistory";
+// import MatchHistory from "../matchHistory";
 
 class TeamDetail extends Component {
     render() {
@@ -27,7 +27,7 @@ class TeamDetail extends Component {
                         <p><img className="jersey" src={jersey} alt={name + " team jersey"}  /></p>
                         <hr />
                         <h3>Match History</h3>
-                        <MatchHistory matchSelect={selectedMatch} teamSelected={name} idTeamSelected={id} teamMatchList={teamList} selectMatchupHandler={selectMatchHandler}/>
+                        {/* <MatchHistory matchSelect={selectedMatch} teamSelected={name} idTeamSelected={id} teamMatchList={teamList} selectMatchupHandler={selectMatchHandler}/> */}
                     </Col>
                 </Row>
             </div>

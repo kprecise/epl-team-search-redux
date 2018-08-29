@@ -4,6 +4,7 @@ import "./index.scss";
 class MatchHistory extends Component {
     render() {
         const { teamSelected, teamMatchList, selectMatchupHandler, idTeamSelected, matchSelect } = this.props;
+        
         const orderResultsByDate = this.props.matchSelect.sort((a, b) => {
             return new Date(b.dateEvent) - new Date(a.dateEvent);   
         });
