@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { Row, Col } from 'reactstrap';
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import { getTeamProfile } from '../actions/action-types'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { getTeamProfile } from '../actions/action-types';
+import TeamMatchUps from "./TeamMatchUps";
 import "./index.scss";
 
 class TeamProfile extends Component {
     render() {
         const result = this.props.teamProfile[0];
-        const arrayLength = this.props.teamProfile;        
-        console.log('checking', arrayLength.length, 'result', result);
-        if (arrayLength.length > 0) {
+        const teamDataLength = this.props.teamProfile;        
+        if (teamDataLength.length > 0) {
             return (
                 <div className="team-profile">
                     <div key={result.idTeam}>
@@ -33,6 +33,7 @@ class TeamProfile extends Component {
                                 <p><img className="jersey" src={result.strTeamJersey} alt={result.strTeam + " team jersey"}  /></p>
                                 <hr />
                                 <h3>Match History</h3>
+                                <TeamMatchUps currentTeam={result.strTeam} />
                             </Col>
                         </Row>                
                     </div>                

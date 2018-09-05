@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LIST_TEAMS, TEAM_SELECTED, GET_TEAM_PROFILE } from "../constants";
+import { LIST_TEAMS, TEAM_SELECTED, GET_TEAM_PROFILE, GET_TEAM_MATCHUP } from "../constants";
 /*
  * action creators
  */
@@ -25,14 +25,20 @@ export function getTeamSelected(teamSelected) {
 }
 
 export function getTeamProfile(teamSelected) {
-
     const url ='https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=';
     const teamSelectedID = teamSelected
     const request =  axios.get(url+teamSelectedID);
-
     return {
         type: GET_TEAM_PROFILE,
         payload: request
     }
+}
 
+export function getTeamMatchUp(currentTeam, teamOpponent) {
+    const url ='https://www.thesportsdb.com/api/v1/json/1/searchevents.php?e='
+    const request = axios.get(url + currentTeam + '_vs_' + teamOpponent)
+    return {
+        type: GET_TEAM_MATCHUP,
+        payload: request
+    }
 }

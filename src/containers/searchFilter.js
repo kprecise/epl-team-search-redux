@@ -10,7 +10,8 @@ class SearchFilter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showTeamProfile: false
+            showTeamProfile: false,
+            currentTeam: ''
         }
         this.handleChange = this.handleChange.bind(this);
         this.props.displayTeamList();
@@ -19,7 +20,7 @@ class SearchFilter extends Component {
         let selectedTeamId = e.target.options[e.target.selectedIndex].getAttribute('id');
         this.props.getTeamSelected(e.target.value);
         this.props.getTeamProfile(selectedTeamId);
-        this.setState({ showTeamProfile: true });
+        this.setState({ showTeamProfile: true, currentTeam: e.target.value });
     }
     render() {
         const IsShowTeamProfile = this.state.showTeamProfile
@@ -38,7 +39,9 @@ class SearchFilter extends Component {
                     </select>
                 </form> 
                 { IsShowTeamProfile &&
-                <TeamProfile />
+                <div>
+                    <TeamProfile />
+                </div>
                 }
             </div>
         );
