@@ -29,6 +29,7 @@ class SearchFilter extends Component {
                 <form className="search-results">
                     <label htmlFor="teamList">Choose a team</label>
                     <select id="teamList" onChange={this.handleChange}>
+                        <option id="choose">-----</option>
                         {
                             this.props.teamsList.map(team => {
                                 return (

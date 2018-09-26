@@ -8,14 +8,20 @@ class TeamMatchUps extends Component {
     constructor(props) {
         super(props);
         this.chooseMatchUp = this.chooseMatchUp.bind(this);
+        this.formatDate = this.formatDate.bind(this);
         this.props.displayTeamList();
     }    
     chooseMatchUp(e) {
         let teamOpponent = e.target.value;
         this.props.getTeamMatchUp(this.props.currentTeam, teamOpponent);
-    }    
+    }   
+    formatDate(date) {
+
+        var options = { year: 'numeric', month: 'short', day: 'numeric' };
+        var newDate  = new Date(date);
+        return newDate.toLocaleDateString("en-CA", options);
+    }         
     render() {
-        console.log('props are', this.props)
         const { currentTeam } = this.props;
         const orderResultsByDate = this.props.teamMatchUp.sort((a, b) => {
             return new Date(b.dateEvent) - new Date(a.dateEvent);   
@@ -46,7 +52,7 @@ class TeamMatchUps extends Component {
                     {orderResultsByDate.map(i => {
                         return (
                             <li key={i.idEvent}>
-                                <span className="date">{i.dateEvent}</span>
+                                <span className="date">{this.formatDate(i.dateEvent)}</span>
                                 <span className="event">{i.strEvent} {i.intHomeScore} - {i.intAwayScore}</span>
                             </li>
                         );
@@ -57,7 +63,6 @@ class TeamMatchUps extends Component {
         );     
     }
 }
-
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({getTeamMatchUp, displayTeamList}, dispatch);
