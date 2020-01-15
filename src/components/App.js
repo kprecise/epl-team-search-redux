@@ -8,7 +8,7 @@ const App = () => (
         <Container>
             <Row>
                 <Col xs="12">
-                    <h1>EPL Search Tool</h1> 
+                    <h1>EPL Team Search <strong>V2</strong></h1> 
                 </Col>
             </Row>
             <Row>
