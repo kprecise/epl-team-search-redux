@@ -1,16 +1,21 @@
 body {
-    background-color: #E8F2D7 !important;
+    background: rgb(48,52,47)!important;
+    background: linear-gradient(90deg, rgba(48,52,47,1) 4%, rgba(78,120,56,1) 42%, rgba(121,187,87,1) 93%) !important;
     .container {
         margin-top: 40px;
         h1 {
             font-family: palatino bold, helvetica, san-serif;
             margin-bottom: 20px;
-            color: darkgreen;
+            color: #fff;
             letter-spacing: 4px;
-            text-shadow: 2px 2px 7px grey;
+            text-shadow: 3px 3px 4px #333;
+            font-size: 2em;
+            strong {
+                color: goldenrod;
+            }
         }
-        .slick-container {
-            min-height: 400px;
+        #teamList {
+           background: #fff;
         }
     }
 }
