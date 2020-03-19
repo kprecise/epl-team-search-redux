@@ -1,74 +1,73 @@
-import React, { Component } from "react";
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import { getTeamMatchUp, displayTeamList } from '../actions/action-types'
+import React from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { getTeamMatchUp, displayTeamList } from "../actions/action-types";
 import "./index.scss";
 
-class TeamMatchUps extends Component {
-    constructor(props) {
-        super(props);
-        this.chooseMatchUp = this.chooseMatchUp.bind(this);
-        this.formatDate = this.formatDate.bind(this);
-        this.props.displayTeamList();
-    }    
-    chooseMatchUp(e) {
-        let teamOpponent = e.target.value;
-        this.props.getTeamMatchUp(this.props.currentTeam, teamOpponent);
-    }   
-    formatDate(date) {
+const TeamMatchUps = ({
+    currentTeam,
+    teamMatchUp,
+    teamsList,
+    getTeamMatchUp
+}) => {
+    const orderResultsByDate = teamMatchUp.sort((a, b) => {
+        return new Date(b.dateEvent) - new Date(a.dateEvent);   
+    });  
 
+    const chooseMatchUp = () => {
+        const teamOpponent = event.target.value;
+        getTeamMatchUp(currentTeam, teamOpponent);
+    }  
+
+    const formatDate = (date) => {
         var options = { year: 'numeric', month: 'short', day: 'numeric' };
         var newDate  = new Date(date);
         return newDate.toLocaleDateString("en-CA", options);
-    }         
-    render() {
-        const { currentTeam } = this.props;
-        const orderResultsByDate = this.props.teamMatchUp.sort((a, b) => {
-            return new Date(b.dateEvent) - new Date(a.dateEvent);   
-        });        
-        return (      
-            <div className="match-history">
-                <label htmlFor="choose-opponent">Pick an opponent from the dropdown list:</label>
-                <select id="choose-opponent" onChange={this.chooseMatchUp} role="listbox">
-                    <option title="Choose">Choose opponent</option>
-                    
-                    {this.props.teamsList.map(x => {
-                        if ( currentTeam === x.strTeam) {
+    }  
+
+    return (
+        <div className="match-history">
+            <label htmlFor="choose-opponent">Pick an opponent from the dropdown list:</label>
+            <select id="choose-opponent" onChange={event => chooseMatchUp()} role="listbox">
+                <option title="Choose">Choose opponent</option>
+                {
+                    teamsList.map(team => {
+                        if ( currentTeam === team.strTeam) {
                             return (
-                                <option className="disabled" key={x.idTeam} disabled>{x.strTeam}</option>   
+                                <option className="disabled" key={team.idTeam} disabled>{team.strTeam}</option>   
                             );
                         } else {
                             return (
-                                <option key={x.idTeam}>{x.strTeam}</option>   
+                                <option key={team.idTeam}>{team.strTeam}</option>   
                             );                       
                         }
-
-                    })}
-
-                </select>
-                <div className="match-details">
-                    <h4>Results</h4>
-                    <ul>
-                    {orderResultsByDate.map(i => {
+                    })
+                }
+            </select>
+            <div className="match-details">
+                <h4>Results</h4>
+                <ul>
+                { 
+                    orderResultsByDate.map(game => {
                         return (
-                            <li key={i.idEvent}>
-                                <span className="date">{this.formatDate(i.dateEvent)}</span>
-                                <span className="event">{i.strEvent} {i.intHomeScore} - {i.intAwayScore}</span>
+                            <li key={game.idEvent}>
+                                <span className="date">{formatDate(game.dateEvent)}</span>
+                                <span className="event">{game.strEvent} {game.intHomeScore} - {game.intAwayScore}</span>
                             </li>
                         );
-                    })}   
-                    </ul>
-                </div>
+                    })
+                }   
+                </ul>
             </div>
-        );     
-    }
+        </div>
+    )
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({getTeamMatchUp, displayTeamList}, dispatch);
 }
 
-function mapStateToProps({teamsList, teamMatchUp}) {
+const mapStateToProps = ({teamsList, teamMatchUp}) => {
     return {teamsList, teamMatchUp}
 }
 

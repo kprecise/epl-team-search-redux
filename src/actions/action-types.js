@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 import { LIST_TEAMS, TEAM_SELECTED, GET_TEAM_PROFILE, GET_TEAM_MATCHUP } from "../constants";
 /*
  * action creators

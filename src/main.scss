@@ -1,11 +1,11 @@
 body {
-    background: rgb(48,52,47)!important;
-    background: linear-gradient(90deg, rgba(48,52,47,1) 4%, rgba(78,120,56,1) 42%, rgba(121,187,87,1) 93%) !important;
+    background: linear-gradient(#067702, #0d6808) !important; 
     .container {
-        margin-top: 40px;
+        background: url('http://cheekyiguana.com/epl/images/epl-logo.png') right top no-repeat;
+        margin-top: 0;
         h1 {
             font-family: palatino bold, helvetica, san-serif;
-            margin-bottom: 20px;
+            margin: 8rem 0 1rem;
             color: #fff;
             letter-spacing: 4px;
             text-shadow: 3px 3px 4px #333;

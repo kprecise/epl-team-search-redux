@@ -1,13 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 
-class SearchFilter extends Component {
-
-    render() {
-        const { teamName, teamId} = this.props;
-        return (     
-            <option id={teamId}>{teamName}</option>
-        );
-    }
+const SearchFilter = ({
+    teamName, 
+    teamId
+}) => {
+    return (     
+        <option id={teamId}>{teamName}</option>
+    );    
 }
 
 export default SearchFilter;

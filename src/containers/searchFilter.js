@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import { displayTeamList, getTeamSelected, getTeamProfile } from '../actions/action-types'
 import TeamProfile from "./teamProfile";
-
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { displayTeamList, getTeamSelected, getTeamProfile } from "../actions/action-types";
 import "./index.scss";
 
 class SearchFilter extends Component {
@@ -15,13 +14,15 @@ class SearchFilter extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.props.displayTeamList();
-    }    
+    }   
+
     handleChange(e) {
         let selectedTeamId = e.target.options[e.target.selectedIndex].getAttribute('id');
         this.props.getTeamSelected(e.target.value);
         this.props.getTeamProfile(selectedTeamId);
         this.setState({ showTeamProfile: true, currentTeam: e.target.value });
     }
+
     render() {
         const IsShowTeamProfile = this.state.showTeamProfile
         return (  
@@ -40,22 +41,19 @@ class SearchFilter extends Component {
                     </select>
                 </form> 
                 { IsShowTeamProfile &&
-                <div>
                     <TeamProfile />
-                </div>
                 }
             </div>
         );
     }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({displayTeamList, getTeamSelected, getTeamProfile}, dispatch);
 }
 
-function mapStateToProps({teamsList, teamSelected, teamProfile}) {
+const mapStateToProps = ({teamsList, teamSelected, teamProfile}) => {
     return {teamsList, teamSelected, teamProfile}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchFilter);
-

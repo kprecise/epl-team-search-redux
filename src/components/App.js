@@ -1,14 +1,14 @@
 import React from "react";
-import { Container, Row, Col } from 'reactstrap';
-import "./index.css";
 import SearchFilter from "../containers/searchFilter";
+import { Container, Row, Col } from "reactstrap";
+import "./index.css";
 
 const App = () => (
     <div className="football-search">
         <Container>
             <Row>
                 <Col xs="12">
-                    <h1>EPL Team Search <strong>V2</strong></h1> 
+                    <h1>EPL Team Search</h1> 
                 </Col>
             </Row>
             <Row>
