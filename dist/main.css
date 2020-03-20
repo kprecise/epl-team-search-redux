@@ -1,47 +1,54 @@
-/* Team Details */
-.team-details {
+/* Search Results */
+.search-results label {
+  padding: 4px 12px 4px 0;
+  color: #fff;
+  font-size: 20px; }
+
+.team-profile {
   border: 1px #ccc solid;
   padding: 12px;
   background: #eeeeee; }
-  .team-details h2, .team-details h3 {
+  .team-profile h2, .team-profile h3 {
     font-family: palatino bold, helvetica, san-serif; }
-  .team-details h2 {
+  .team-profile h2 {
     font-size: 32px; }
-  .team-details h3 {
+  .team-profile h3 {
     font-size: 22px; }
-  .team-details img.logo {
+  .team-profile img.logo {
     width: 20%; }
-  .team-details img.jersey {
+  .team-profile img.jersey {
     width: 20%; }
 
-/* Match History */
-.match-history #choose-opponent {
+#choose-opponent {
   margin-left: 6px; }
 
-.match-history .match-details {
-  margin-top: 20px; }
+.match-details h4 {
+  font-size: 18px;
+  margin-top: 1em; }
 
-.match-history label {
-  display: block; }
+.match-details ul {
+  padding: 0;
+  margin: 0; }
+  .match-details ul li {
+    list-style-type: none; }
+    .match-details ul li span.date {
+      display: inline-block;
+      min-width: 110px; }
 
-.match-history div {
-  font-style: italic;
-  margin-bottom: 6px; }
-  .match-history div span {
-    display: block; }
-
-/* Search Results */
-.search-results label {
-  padding: 4px 12px 4px 0; }
-
-.container {
-  margin-top: 40px; }
-  .container h1 {
-    font-family: palatino bold, helvetica, san-serif;
-    margin-bottom: 20px;
-    color: darkgreen;
-    letter-spacing: 4px;
-    text-shadow: 2px 2px 7px #ccc; }
-  .container .slick-container {
-    min-height: 400px; }
+body {
+  background: linear-gradient(#3b7d38, #32722f) !important; }
+  body .container {
+    background: url("http://cheekyiguana.com/epl/images/epl-logo.png") right top no-repeat;
+    margin-top: 0; }
+    body .container h1 {
+      font-family: palatino bold, helvetica, san-serif;
+      margin: 8rem 0 1rem;
+      color: #fff;
+      letter-spacing: 4px;
+      text-shadow: 3px 3px 4px #333;
+      font-size: 2em; }
+      body .container h1 strong {
+        color: goldenrod; }
+    body .container #teamList {
+      background: #fff; }
 
