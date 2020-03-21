@@ -6,24 +6,50 @@
 
 .team-profile {
   border: 1px #ccc solid;
-  padding: 12px;
-  background: #eeeeee; }
-  .team-profile h2, .team-profile h3 {
-    font-family: palatino bold, helvetica, san-serif; }
+  background: #fff;
+  padding: 1rem 1rem 4rem;
+  margin: 1rem 0; }
+  .team-profile h2, .team-profile h3, .team-profile h4 {
+    margin-top: 0;
+    font-family: palatino bold, helvetica, san-serif;
+    font-weight: 500; }
   .team-profile h2 {
-    font-size: 32px; }
+    font-size: 2.6rem;
+    margin-bottom: 0.8rem; }
+    .team-profile h2 img {
+      margin-right: 0.7rem; }
+    .team-profile h2 span {
+      vertical-align: middle; }
   .team-profile h3 {
-    font-size: 22px; }
+    font-size: 1.6rem; }
+  .team-profile h4 {
+    font-size: 1.2rem; }
+  .team-profile hr {
+    margin: 2rem 0; }
   .team-profile img.logo {
-    width: 20%; }
+    display: block;
+    width: 20%;
+    margin: 1rem auto; }
   .team-profile img.jersey {
-    width: 20%; }
+    display: block;
+    margin: 1rem auto;
+    width: 50%; }
+  .team-profile img.banner {
+    margin-bottom: 2rem;
+    width: 100%; }
+  .team-profile a.paraLink {
+    text-decoration: none;
+    font-weight: bold; }
+  .team-profile .centred {
+    width: 100%; }
+  .team-profile .hr-mobile {
+    display: block; }
 
 #choose-opponent {
-  margin-left: 6px; }
+  margin-left: 6px;
+  background-color: #C1D7C1; }
 
 .match-details h4 {
-  font-size: 18px;
   margin-top: 1em; }
 
 .match-details ul {
@@ -32,11 +58,18 @@
   .match-details ul li {
     list-style-type: none; }
     .match-details ul li span.date {
-      display: inline-block;
-      min-width: 110px; }
+      font-size: 0.9rem;
+      font-style: italic;
+      font-weight: bold;
+      color: #335B33; }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 768px) {
+  .team-profile .hr-mobile {
+    display: none; } }
 
 body {
-  background: linear-gradient(#3b7d38, #32722f) !important; }
+  background: linear-gradient(#468046, #3b7d3b) !important; }
   body .container {
     background: url("http://cheekyiguana.com/epl/images/epl-logo.png") right top no-repeat;
     margin-top: 0; }
@@ -51,4 +84,7 @@ body {
         color: goldenrod; }
     body .container #teamList {
       background: #fff; }
+    body .container a {
+      color: #335B33;
+      text-decoration: underline; }
 

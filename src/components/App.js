@@ -1,5 +1,5 @@
 import React from "react";
-import SearchFilter from "../containers/searchFilter";
+import SearchFilter from "./searchFilter";
 import { Container, Row, Col } from "reactstrap";
 import "./index.css";
 

@@ -1,0 +1,93 @@
+/* Search Results */
+.search-results {
+    label {
+        padding: 4px 12px 4px 0;
+        color: #fff;
+        font-size: 20px;
+    }
+}
+.team-profile {
+    border: 1px #ccc solid;
+    background: #fff;
+    padding: 1rem 1rem 4rem;
+    margin: 1rem 0;
+    h2, h3, h4 {
+        margin-top: 0;
+        font-family: palatino bold, helvetica, san-serif;
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 2.6rem;
+        margin-bottom: 0.8rem;
+        img {
+            margin-right: 0.7rem;
+        }
+        span {
+            vertical-align: middle;
+        }
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    } 
+    hr {
+        margin: 2rem 0;
+    }   
+    img.logo {
+        display: block;
+        width: 30%;
+        margin: 1rem auto;
+    }
+    img.jersey {
+        display: block;
+        margin: 1rem auto;
+        width: 50%;
+    }
+    img.banner {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    a.paraLink {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .centred {
+        width: 100%;
+    }
+    .hr-mobile {
+        display: block;
+    }    
+}
+#choose-opponent {
+    margin-left: 6px;
+    background-color: #C1D7C1;
+}
+.match-details {
+    h4 {
+        margin-top: 1em;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style-type: none;
+            span.date {
+                font-size: 0.9rem;
+                font-style: italic;
+                font-weight: bold;
+                color: #335B33;
+            }
+        }
+    }
+}  
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 768px) {
+    .team-profile {
+        .hr-mobile {
+            display: none;
+        }       
+    }
+  }

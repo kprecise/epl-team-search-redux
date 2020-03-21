@@ -7,7 +7,6 @@ import { LIST_TEAMS, TEAM_SELECTED, GET_TEAM_PROFILE, GET_TEAM_MATCHUP } from ".
 export function displayTeamList() {
     const url = 'https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League'
     const request =  axios.get(url);
-
     return {
         type: LIST_TEAMS,
         payload: request
