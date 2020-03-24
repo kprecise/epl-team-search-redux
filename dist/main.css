@@ -72,7 +72,7 @@
 body {
   background: linear-gradient(#468046, #3b7d3b) !important; }
   body .container {
-    background: url("http://cheekyiguana.com/epl/images/epl-logo.png") right top no-repeat;
+    background: url("http://cheekyiguana.com/epl/images/epl-logo.png") center top no-repeat;
     margin-top: 0; }
     body .container h1 {
       font-family: palatino bold, helvetica, san-serif;
